@@ -19,6 +19,11 @@ class InputData(BaseModel):
     ca: int
     thal: int
 
+# ✅ This resolves the 404 issue for root "/"
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Heart Disease Prediction API. Use POST /predict with input data."}
+
 @app.post("/predict")
 def get_prediction(data: InputData):
     try:
