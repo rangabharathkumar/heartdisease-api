@@ -3,7 +3,7 @@ import numpy as np
 
 # Load the model artifacts from the artifacts folder
 # Adjust paths as needed (here we assume the working directory is the project root)
-model = joblib.load("app/artifacts/heartdisease_model.pkl")
+model = joblib.load("app/artifacts/heart_disease_model.pkl")
 scaler = joblib.load("app/artifacts/scaler.pkl")
 
 # If your training pipeline used label encoders for categorical columns, load them; otherwise, omit this.
